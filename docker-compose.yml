@@ -1,0 +1,48 @@
+version: '2'
+
+#services:
+#  sqldb:
+#    image: mysql
+#    environment:
+#      MYSQL_ROOT_PASSWORD: passwd
+#      MYSQL_DATABASE: company
+#      MYSQL_USER: shripad
+#      MYSQL_PASSWORD: passwd
+#    ports:
+#      - "9306:3306"
+#  php:
+#    build: .
+#    container_name: myphp
+#    ports:
+#      - 80:80
+#    volumes:
+#    - ./src:/var/www/html
+#    environment: 
+#      - MYSQL_ROOT_PASSWORD=passwd
+services:
+  mysql:
+        image: mysql:8.0
+        container_name: mysql-server-80
+        command: --default-authentication-plugin=mysql_native_password
+#        working_dir: /src
+        volumes:
+          - .:/src
+        restart: always
+        environment:
+          - MYSQL_ROOT_PASSWORD=passwd
+          - MYSQL_DATABASE=my_db
+          - MYSQL_USER=shripad
+          - MYSQL_PASSWORD=passwd
+        ports:
+          - "6306:3306"
+  php:
+    container_name: my-php
+    image: mysql
+    build:
+      context: ./
+    volumes:
+      - ./src:/var/www/html/
+    ports:
+      - 8080:80
+    depends_on:
+      - mysql

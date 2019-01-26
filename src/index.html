@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title> Login Form </title>
+	<style>
+      
+          .jumbotron {
+              
+              background-image: url(welcome.jpg);
+              text-align: center;
+              margin-top: 50px;
+	      margin-right: 285px;
+	      margin-left: 285px;
+	      padding-left:10px;
+	      padding-right:10px;
+	      padding-top:10px;
+	      padding-bottom:200px;          
+	}
+	</style>
+  </head>
+  <body>
+	</div>
+	<div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+        <strong>Warning!</strong>  Never share your password with anyone.
+      </div>
+	<div class="jumbotron" id="jumbotron">	
+	<form action="index.php" method="post">
+          <h1 class="display-5">Greetings!</h1>
+	<h2 class="display-5">
+	<p> Enter username : <input type=text name="uname" placeholder="enter your name here" id="txt"> </p></h2>	
+	<p> <button type="submit" class="btn btn-success" id="myB"> </p>
+  	Log in
+	</button>
+	</form>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript">
+	document.getElementById("myB").onclick = function(){
+		if(document.getElementById("txt").value == "Shripad")		
+		alert("Logged in successfully");
+		else
+		{
+		alert("Incorrect Username  :  "+document.getElementById("txt").value);
+		location.reload();
+		}	
+	}	
+    </script></div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<h2><marquee>This is my index.html for Validation Purpose</marquee></h2>  
+</body>
+</html>
